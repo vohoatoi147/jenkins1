@@ -18,12 +18,12 @@ pipeline {
             }
 
         }
-        // stage('Build'){
-        //     steps{
-        //         sh 'docker build -t vohoatoi147/test-jenkins:v1 .'
-        //         sh 'echo $DOCKERHUB_CREDENTIAL_PWS | docker login -u $DOCKERHUB_CREDENTIAL_USR --password-stdin'
-        //         sh 'docker push vohoatoi147/test-jenkins:v1'
-        //     }
-        // }
+        stage('Build'){
+            steps{
+                sh 'docker build -t vohoatoi147/test-jenkins:v1 .'
+                sh 'echo $DOCKERHUB_CREDENTIAL_PWS | docker login -u $DOCKERHUB_CREDENTIAL_USR --password-stdin'
+                sh 'docker push vohoatoi147/test-jenkins:v1'
+            }
+        }
     }
 }
