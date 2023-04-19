@@ -1,14 +1,8 @@
 pipeline {
     agent any
-    // agent {
-    //     docker {
-    //         image 'docker:latest'
-    //         args '-v /var/run/docker.sock:/var/run/docker.sock'
-    //     }
-    // }
-    // environment{
-    //     DOCKERHUB_CREDENTIAL=credentials('hoatoi-dockerhub')
-    // }
+    environment{
+        DOCKERHUB_CREDENTIAL=credentials('hoatoi-dockerhub')
+    }
 
     stages{
         stage('Clone'){
