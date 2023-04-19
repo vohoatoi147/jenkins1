@@ -13,7 +13,7 @@ pipeline {
     stages{
         stage('Clone'){
             steps{
-                git branch: 'main', credentialsId: 'c585e703-64b7-4f3e-a7ce-38510984d9a7', url: 'https://github.com/vohoatoi147/jenkins-1.git'ddsdsdasd
+                git branch: 'main', credentialsId: 'hoatoi-github', url: 'https://github.com/vohoatoi147/jenkins1.git'
 
             }
 
